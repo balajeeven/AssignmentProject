@@ -16,8 +16,7 @@ apply plugin: "com.jfrog.artifactory"
 repositories {
     jcenter()
 }
-
-publishing {
+task artifactoryPublish << {
     publications {
         mavenJava(MavenPublication) {
             groupId '3'
