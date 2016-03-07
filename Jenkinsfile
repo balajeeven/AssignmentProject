@@ -11,14 +11,14 @@ node {
 stage 'Checkout_AssignmentProject'
 node {
 git 'https://github.com/exorcist007/AssignmentProject.git'
-stage 'build'
-bat 'gradle build'
+stage 'build_AssignmentProject'
+bat 'gradle build --info'
 }
 stage 'Checkout_Moderator_template'
 node {
 git 'https://github.com/exorcist007/ModeratorTemplate1.1-1.git'
-stage 'build'
-bat 'gradle build'
+stage 'build_Moderator_template'
+bat 'gradle build --info'
 }
 stage name: 'Production', concurrency: 1
 node {
