@@ -13,6 +13,8 @@ node {
 git 'https://github.com/exorcist007/AssignmentProject.git'
 stage 'build_AssignmentProject'
 bat 'gradle build --info'
+stage 'PublishArtifact'
+bat 'gradle artiPub --info'
 }
 stage 'Checkout_Moderator_template'
 node {
