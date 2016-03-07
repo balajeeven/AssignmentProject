@@ -20,7 +20,7 @@ git 'https://github.com/exorcist007/AssignmentProject.git'
 //2
 stage 'build_AssignmentProject'
 node{
-    bat 'gradle eclipse --info'
+    bat 'gradle build --info'
 }
 
 
