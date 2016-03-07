@@ -18,8 +18,7 @@ repositories {
 }
 
 
-task arti << 
-{
+
 publishing {
     publications {
         mavenJava(MavenPublication) {
@@ -30,7 +29,7 @@ publishing {
         }
     }
 }
-}
+
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.13'
     testCompile 'junit:junit:4.12'
