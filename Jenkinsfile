@@ -1,6 +1,6 @@
 #!groovy
 
-stage 'setJava'
+stage 'setJAVA_HOME'
 node {
 
     // env.JAVA_HOME = "C:\\Program Files\\Java\\jdk1.8.0_66"
@@ -8,37 +8,18 @@ node {
      echo env.JAVA_HOME
 
 }
-stage 'Checkout'
+stage 'Checkout_AssignmentProject'
 node {
-git 'https://github.com/vaiju12p/AssignmentProject.git'
-//stage 'clean'
-//bat 'gradle clean --info'
+git 'https://github.com/exorcist007/AssignmentProject.git'
 stage 'build'
 bat 'gradle build --info'
-//stage 'jar'
-//bat 'gradle jar --info'
 }
-stage 'Checkout'
+stage 'Checkout_Moderator_template'
 node {
-git 'https://github.com/vaiju12p/ModeratorTemplate1.1-1.git'
-stage 'clean'
-bat 'gradle clean --info'
+git 'https://github.com/exorcist007/ModeratorTemplate1.1-1.git'
 stage 'build'
 bat 'gradle build --info'
-//stage 'jar'
-//bat 'gradle jar --info'
 }
-//stage 'customTask'
-//node{
-  //  sleep time: 15000, unit: 'NANOSECONDS'
-//this is a custom task that gets called irrespective of the repositories being called
-//bat 'gradle sayHello'
-//}
-//stage 'jar'
-//node{
-//extra batch command called: may be ignored
-//bat 'gradle clean jar --info'
-//}
 stage name: 'Production', concurrency: 1
 node {
  echo 'Production server looks to be alive'
