@@ -31,7 +31,7 @@ node{
 //3
 stage 'PublishArtifact'
 node{
-    bat 'gradle bitwise --info'
+    bat 'gradle arti --info'
 }
 
 
