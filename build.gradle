@@ -17,13 +17,14 @@ repositories {
     jcenter()
 }
 task artifactoryPublish << {
+  publishing{
     publications {
         mavenJava(MavenPublication) {
             groupId '3'
             artifactId '3'
             version '3'
             from components.java
-            
+            }
         }
     }
 }
