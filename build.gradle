@@ -16,7 +16,7 @@ apply plugin: "com.jfrog.artifactory"
 repositories {
     jcenter()
 }
-task artifactoryPublish1 << {
+task bitwise << {
   publishing{
     publications {
         mavenJava(MavenPublication) {
