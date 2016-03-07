@@ -23,12 +23,15 @@ node{
     bat 'gradle build --info'
 }
 
-
+stage 'eclipse-artifact'
+node{
+    bat 'gradle eclipse --info'
+}
 
 //3
 stage 'PublishArtifact'
 node{
-    bat 'gradle artifacotryPublish1 --info'
+    bat 'gradle bitwise --info'
 }
 
 
