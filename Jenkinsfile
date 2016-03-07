@@ -11,19 +11,25 @@
 stage 'Checkout_AssignmentProject'
 node {
 git 'https://github.com/exorcist007/AssignmentProject.git'
+}
 stage 'build_AssignmentProject'
-bat 'gradle build --info'
+node{
+    bat 'gradle build --info'
+}
 stage 'PublishArtifact'
-bat 'gradle artiPub --info'
+node{
+    bat 'gradle artiPub --info'
 }
 stage 'Checkout_Moderator_template'
 node {
 git 'https://github.com/exorcist007/ModeratorTemplate1.1-1.git'
-stage 'build_Moderator_template'
-bat 'gradle build --info'
 }
-stage name: 'Production', concurrency: 1
-node {
+stage 'build_Moderator_template'
+node{
+    bat 'gradle build --info'
+}
+tage name: 'Production', concurrency: n
+ode {
  echo 'Production server looks to be alive'
  echo "Deployed to production"
 }
