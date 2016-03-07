@@ -8,28 +8,42 @@
   //   echo env.JAVA_HOME
 
 //}
+
+//1
 stage 'Checkout_AssignmentProject'
 node {
 git 'https://github.com/exorcist007/AssignmentProject.git'
 }
+
+
+
+//2
 stage 'build_AssignmentProject'
 node{
     bat 'gradle build --info'
 }
+
+
+
+//3
 stage 'PublishArtifact'
 node{
     bat 'gradle artiPub --info'
 }
+
+
+
+//4
 stage 'Checkout_Moderator_template'
 node {
 git 'https://github.com/exorcist007/ModeratorTemplate1.1-1.git'
 }
+
+
+
+
+//5
 stage 'build_Moderator_template'
 node{
     bat 'gradle build --info'
-}
-tage name: 'Production', concurrency: n
-ode {
- echo 'Production server looks to be alive'
- echo "Deployed to production"
 }
