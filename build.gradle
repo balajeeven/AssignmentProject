@@ -16,19 +16,21 @@ apply plugin: "com.jfrog.artifactory"
 repositories {
     jcenter()
 }
-task bitwise << {
-  publishing{
+
+
+task arti << 
+{
+publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId '3'
-            artifactId '3'
-            version '3'
+            groupId '420'
+            artifactId '420'
+            version '420'
             from components.java
-            }
         }
     }
 }
-
+}
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.13'
     testCompile 'junit:junit:4.12'
