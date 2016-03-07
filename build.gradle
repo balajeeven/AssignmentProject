@@ -11,8 +11,8 @@ buildscript {
     classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.0.0"
   }
 }
-apply plugin: "com.jfrog.artifactory"
 
+apply plugin: 'com.jfrog.artifactory'
 repositories {
     jcenter()
 }
