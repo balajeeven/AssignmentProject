@@ -28,7 +28,7 @@ node{
 //3
 stage 'PublishArtifact'
 node{
-    bat 'gradle artifacotryPublish --info'
+    bat 'gradle artifacotryPublish1 --info'
 }
 
 
