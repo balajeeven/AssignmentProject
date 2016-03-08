@@ -1,16 +1,15 @@
 #!groovy
 
-//stage 'setJAVA_HOME'
-//node {
+stage 'setJAVA_HOME'
+node {
 
-  //   env.JAVA_HOME = "C:\\Program Files\\Java\\jdk1.8.0_66"
+     env.JAVA_HOME = "C:\\Program Files\\Java\\jdk1.8.0_66"
   //   env.JAVA_HOME = "C:\\Program Files (x86)\\Java\\jdk1.8.0_11"
-    // echo env.JAVA_HOME
-
-//}
+     echo env.JAVA_HOME
+}
 
 //1
-stage 'Checkout_AssignmentProject'
+stage 'clone_AssignmentProject'
 node {
 git 'https://github.com/exorcist007/AssignmentProject.git'
 }
@@ -30,7 +29,7 @@ node{
 }
 
 //3
-stage 'PublishArtifact'
+stage 'Publish-Artifact'
 node{
    if(isUnix()){
     sh 'gradle publish --info'
@@ -43,7 +42,7 @@ node{
 
 
 //4
-stage 'Checkout_Moderator_template'
+stage 'Clone_Moderator_template'
 node {
 git 'https://github.com/exorcist007/ModeratorTemplate1.1-1.git'
 }
@@ -52,7 +51,7 @@ git 'https://github.com/exorcist007/ModeratorTemplate1.1-1.git'
 
 
 //5
-stage 'build_Moderator_template'
+stage 'Build_Moderator_template'
 node{
   if(isUnix()){
   sh 'gradle build --info'
