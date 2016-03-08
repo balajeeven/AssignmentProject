@@ -22,9 +22,9 @@ repositories {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-         groupId '420'
-      	 artifactId '420'
-         version '420'
+         groupId 'trainee'
+      	 artifactId 'traineeJar'
+         version '1'
    
             from components.java
         }
@@ -35,7 +35,7 @@ publishing {
               username 'admin'
               password 'password'
             }
-            url "http://10.30.127.67:9091/artifactory/libs-release-local"
+            url "http://10.30.127.67:9091/artifactory/AssignmentreviewTemplate"
         }
     }
 }
