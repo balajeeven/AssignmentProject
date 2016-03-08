@@ -22,9 +22,9 @@ repositories {
 publishing {
     publications {
         mavenJava(MavenPublication) {
-         groupId 'trainee'
-      	 artifactId 'traineeJar'
-         version '1'
+         groupId 'java'
+      	 artifactId 'postfix'
+         version '1.0'
    
             from components.java
         }
