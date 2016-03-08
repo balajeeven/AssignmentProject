@@ -40,7 +40,10 @@ publishing {
         }
     }
 }
-
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.13'
+    testCompile 'junit:junit:4.12'
+}
 sonarqube {
     properties {
         property "sonar.projectName", "Java :: Simple Project :: SonarQube Scanner for Gradle"
@@ -60,7 +63,4 @@ jacocoTestReport {
     }
 }
 
-dependencies {
-    compile 'org.slf4j:slf4j-api:1.7.13'
-    testCompile 'junit:junit:4.12'
-}
+
