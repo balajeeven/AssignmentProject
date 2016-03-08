@@ -25,7 +25,7 @@ node{
 
 stage 'InputArtifactName'
 node{
-  input message: 'Enter The name of the jar', ok: 'Submit', parameters: [[$class: 'TextParameterDefinition', defaultValue: 'traineeJar-1', description: '', name: '']]
+  input message: 'Enter The name of the jar', ok: 'Submit', parameters: [[$class: 'TextParameterDefinition', defaultValue: 'traineeJar-3', description: '', name: '']]
 
 }
 
