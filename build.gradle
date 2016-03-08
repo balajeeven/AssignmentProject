@@ -13,7 +13,7 @@ allprojects {
 sonarqube {
     properties {
         property "sonar.projectName", "Java :: ParkingLot :: SonarQube Scanner for Gradle"
-        property "sonar.projectKey", "java:ParkingLot"
+        property "sonar.projectKey", "java:TempleteProject"
         property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
     }
 }
