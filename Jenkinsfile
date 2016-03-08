@@ -21,6 +21,7 @@ git 'https://github.com/exorcist007/AssignmentProject.git'
 stage 'build_AssignmentProject'
 node{
     bat 'gradle build --info'
+    sh 'gradle build --info'
 }
 
 //3
