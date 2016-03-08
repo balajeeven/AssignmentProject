@@ -32,7 +32,12 @@ node{
 //3
 stage 'PublishArtifact'
 node{
-    bat 'gradle publish --info'
+   if(isUnix()){
+    sh 'gradle publish --info'
+  }
+  else{
+   bat 'gradle publish --info'
+}
 }
 
 
@@ -49,5 +54,11 @@ git 'https://github.com/exorcist007/ModeratorTemplate1.1-1.git'
 //5
 stage 'build_Moderator_template'
 node{
+  if(isUnix()){
+  sh 'gradle build --info'
+    
+  }
+  else{
     bat 'gradle build --info'
+  }
 }
