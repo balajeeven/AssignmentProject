@@ -38,10 +38,28 @@ node{
    bat 'gradle publish --info'
 }
 }
-
-
-
 //4
+stage 'Sonar-report'
+node{
+     if(isUnix()){
+          sh 'gradle sonarqube --info'
+     }else{
+          bat 'gradle sonarqube --info'
+     }
+}
+
+//5
+stage 'JaCoCo-Coverage-report'
+node{
+     if(isUnix()){
+          sh 'gradle jacoco --info'
+     }else{
+          bat 'gradle jacoco --info'
+     }
+}
+
+
+//6
 stage 'Clone_Moderator_template'
 node {
 git 'https://github.com/exorcist007/ModeratorTemplate1.1-1.git'
@@ -50,7 +68,7 @@ git 'https://github.com/exorcist007/ModeratorTemplate1.1-1.git'
 
 
 
-//5
+//7
 stage 'Build_Moderator_template'
 node{
   if(isUnix()){
