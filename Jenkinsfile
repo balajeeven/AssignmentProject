@@ -82,5 +82,5 @@ node{
 //8
 stage 'send-mail'
 node{
-     mail bcc: 'asinha161@gmail.com', body: 'Please check out the jenkins file build', cc: 'asinha161@hotmail.com', charset: '', from: '', mimeType: 'text/plain', replyTo: '', subject: 'JENKINS-FILE build', to: 'asinha161@gmail.com'
+     mail bcc: 'asinha161@gmail.com', body: 'Please check out the jenkins file build', cc: 'asinha161@hotmail.com', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'JENKINS-FILE build', to: 'asinha161@gmail.com'
 }
