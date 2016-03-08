@@ -1,13 +1,13 @@
 #!groovy
 
-stage 'setJAVA_HOME'
-node {
+//stage 'setJAVA_HOME'
+//node {
 
-     env.JAVA_HOME = "C:\\Program Files\\Java\\jdk1.8.0_66"
+  //   env.JAVA_HOME = "C:\\Program Files\\Java\\jdk1.8.0_66"
   //   env.JAVA_HOME = "C:\\Program Files (x86)\\Java\\jdk1.8.0_11"
-     echo env.JAVA_HOME
+    // echo env.JAVA_HOME
 
-}
+//}
 
 //1
 stage 'Checkout_AssignmentProject'
