@@ -23,7 +23,11 @@ node{
     bat 'gradle build --info'
 }
 
+stage 'InputArtifactName'
+node{
+  input message: 'Enter The name of the jar', ok: 'Submit', parameters: [[$class: 'TextParameterDefinition', defaultValue: 'traineeJar-1', description: '', name: '']]
 
+}
 
 //3
 stage 'PublishArtifact'
