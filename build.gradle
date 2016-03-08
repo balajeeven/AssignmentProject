@@ -4,12 +4,45 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.sonarqube'
 apply plugin: 'jacoco'
+
+sourceCompatibility = 1.8
 allprojects {
     ext.baseVersion = "0.1"
     ext.snapshotVersion = true
+}
+sonarqube {
+    properties {
+        property "sonar.projectName", "Java :: ParkingLot :: SonarQube Scanner for Gradle"
+        property "sonar.projectKey", "java:ParkingLot"
+        property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
+    }
+}
+jacoco {
+    toolVersion = "0.7.1.201405082137"
+    reportsDir = file("$buildDir/customJacocoReportDir")
+}
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination "${buildDir}/jacocoHtml"
+    }
+}
 
-    group = "org.sonarqube"
-    version = "$baseVersion" + (snapshotVersion ? "-SNAPSHOT" : "")
+buildscript {
+    repositories {
+        maven {
+            url "http://repo1.maven.org/maven2/"
+        }
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'org.ajoberstar:gradle-jacoco:0.1.0'
+        classpath 'org.sonarqube.gradle:gradle-sonarqube-plugin:1.0'
+    }
 }
 buildscript {
   repositories {

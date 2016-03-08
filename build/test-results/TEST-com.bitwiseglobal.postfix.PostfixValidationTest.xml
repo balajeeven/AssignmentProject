@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bitwiseglobal.postfix.PostfixValidationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-03-02T06:32:31" hostname="HRPRDS" time="0.002">
+<testsuite name="com.bitwiseglobal.postfix.PostfixValidationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-03-08T16:51:04" hostname="Victor" time="0.006">
   <properties/>
-  <testcase name="itMustCheckTheValidityOfOperatorsAndOperands" classname="com.bitwiseglobal.postfix.PostfixValidationTest" time="0.0"/>
-  <testcase name="itShouldNotAllowEmptyInputToBeProcessed" classname="com.bitwiseglobal.postfix.PostfixValidationTest" time="0.001"/>
-  <testcase name="itMustCheckThePresenceOfSpacesInThePostfixExpression" classname="com.bitwiseglobal.postfix.PostfixValidationTest" time="0.0"/>
-  <testcase name="itMustVarifyTheMinimumAllowedNumbersOfOperatorsAndOperands" classname="com.bitwiseglobal.postfix.PostfixValidationTest" time="0.0"/>
-  <testcase name="itMustHaveValidNumbersOfOperatorsAndOperands" classname="com.bitwiseglobal.postfix.PostfixValidationTest" time="0.0"/>
+  <testcase name="itMustCheckTheValidityOfOperatorsAndOperands" classname="com.bitwiseglobal.postfix.PostfixValidationTest" time="0.001"/>
+  <testcase name="itShouldNotAllowEmptyInputToBeProcessed" classname="com.bitwiseglobal.postfix.PostfixValidationTest" time="0.0"/>
+  <testcase name="itMustCheckThePresenceOfSpacesInThePostfixExpression" classname="com.bitwiseglobal.postfix.PostfixValidationTest" time="0.001"/>
+  <testcase name="itMustVarifyTheMinimumAllowedNumbersOfOperatorsAndOperands" classname="com.bitwiseglobal.postfix.PostfixValidationTest" time="0.001"/>
+  <testcase name="itMustHaveValidNumbersOfOperatorsAndOperands" classname="com.bitwiseglobal.postfix.PostfixValidationTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
