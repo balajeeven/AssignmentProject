@@ -20,9 +20,13 @@ git 'https://github.com/exorcist007/AssignmentProject.git'
 //2
 stage 'build_AssignmentProject'
 node{
+  if(isUnix()){
   sh 'gradle build --info'
-    bat 'gradle build --info'
     
+  }
+  else{
+    bat 'gradle build --info'
+  }
 }
 
 //3
