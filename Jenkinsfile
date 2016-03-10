@@ -24,7 +24,7 @@ node{
     
   }
   else{
-  //  bat 'gradle build --info'
+    bat 'gradle build --info'
   }
 }
 
@@ -35,7 +35,7 @@ node{
     sh 'gradle publish --info'
   }
   else{
- //  bat 'gradle publish --info'
+   bat 'gradle publish --info'
 }
 }
 //4
@@ -44,7 +44,7 @@ node{
      if(isUnix()){
           sh 'gradle sonarqube --info'
      }else{
-   //       bat 'gradle sonarqube --info'
+          bat 'gradle sonarqube --info'
      }
 }
 
@@ -54,7 +54,7 @@ node{
      if(isUnix()){
           sh 'gradle jacoco --info'
      }else{
-   //       bat 'gradle jacoco --info'
+          bat 'gradle jacoco --info'
      }
 }
 
