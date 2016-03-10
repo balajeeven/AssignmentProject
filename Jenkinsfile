@@ -62,7 +62,7 @@ node{
 //6
 stage 'Clone_Moderator_template'
 node {
-git 'https://github.com/exorcist007/ModeratorTemplate1.1-1.git'
+git 'https://github.com/exorcist007/ModeratorTemplate1.1.git'
 }
 
 
@@ -72,15 +72,15 @@ git 'https://github.com/exorcist007/ModeratorTemplate1.1-1.git'
 stage 'Build_Moderator_template'
 node{
   if(isUnix()){
-  sh 'gradle build --info'
+  sh 'gradle clean -P pName=ART build  --info'
     
   }
   else{
-    bat 'gradle build --info'
+    bat 'gradle clean -P pName=ART build --info'
   }
 }
 //8
-stage 'send-mail'
-node{
-     mail bcc: 'asinha161@gmail.com', body: 'Please check out the jenkins file build', cc: 'asinha161@hotmail.com', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'JENKINS-FILE build', to: 'asinha161@gmail.com'
-}
+//stage 'send-mail'
+//node{
+  //   mail bcc: 'asinha161@gmail.com', body: 'Please check out the jenkins file build', cc: 'asinha161@hotmail.com', charset: 'UTF-8', from: '', mimeType: 'text/plain', replyTo: '', subject: 'JENKINS-FILE build', to: 'asinha161@gmail.com'
+//}
